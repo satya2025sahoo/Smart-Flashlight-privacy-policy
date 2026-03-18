@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Flashlight Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* * CSS for "Glass and Gold" Theme
+         * Based on the Flutter app's theme
+         */
+        :root {
+            --primary-color: #FFD700; /* Gold */
+            --background-color: #040404; /* Dark Background */
+            --text-color: rgba(255, 255, 255, 0.7); /* White70 */
+            --heading-color: #FFD700; /* Gold */
+            --container-bg: rgba(0, 0, 0, 0.3);
+            --border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 20px;
+            /* Simple backdrop-filter for a "glass" effect */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* * Embedded App Icon 
+         * This is the Base64 Data URI for your app_icon_512.png
+         */
+        .app-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 24px;
+            margin: 0 auto 20px;
+            /* This now points to your uploaded image file */
+            background-image: url('app_icon 512.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 2.5em;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        h2 {
+            color: var(--heading-color);
+            border-bottom: 1.5px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 1.1em;
+            letter-spacing: 0.5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: var(--heading-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 40px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="app-icon"></div>
+            <h1>Smart Flashlight</h1>
+            <p>Privacy Policy</p>
+        </header>
+
+        <main>
+            <p><strong>Last Updated: <span id="last-updated">March 15, 2026</span></strong></p>
+
+            <section>
+                <h2>Introduction</h2>
+                <p>This privacy policy governs your use of the "Smart Flashlight" mobile application (the "App") created by <strong>Satya Ranjan Sahoo</strong>. This policy outlines the types of data we collect, why we collect it, and how it is used, processed, and stored.</p>
+                <p>Your privacy is critically important to us. All data processing for the App's core features occurs <strong>entirely on your device</strong>. No personal audio, sensor, or image data is ever recorded, stored, or transmitted to any server.</p>
+            </section>
+
+            <section>
+                <h2>Data Collection and Use (Permissions)</h2>
+                <p>The App requests permissions to provide its smart features. All data processed via these permissions remains on your device.</p>
+                <ul>
+                    <li>
+                        <strong>Microphone Permission:</strong> This permission is required for one optional, user-activated features:
+                        <ul>
+                            <li><strong>"Party Mode":</strong> When you activate this mode, the App analyzes low-frequency (bass) sounds from your environment in real-time. This analysis happens entirely on your device to sync the flashlight with the beat. No audio is recorded or stored.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Accelerometer (Motion Sensor):</strong> This sensor is used for:
+                        <ul>
+                            <li><strong>"Shake to Toggle":</strong> To detect a shake gesture to turn the flashlight on or off.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Notification Permission:</strong> This is required by Android to run the "Schedule Mode" as a foreground service. This allows the App to listen for shakes while the App is closed, as per your schedule. A persistent notification will be visible, which is an Android requirement.</li>
+                    <li>
+                        <strong>Flashlight Access:</strong> The App requires access to your device's flashlight to perform its primary function as a flashlight.</li>
+                    <li>
+                        <strong>Wakelock:</strong> This permission is used to keep the screen on during "Party Mode" or "Schedule Mode" to ensure the features remain active and responsive.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Local Data Storage (On-Device)</h2>
+                <p>The App uses <code>SharedPreferences</code> (a standard Android feature) to save your settings locally on your device. This includes:</p>
+                <ul>
+                    <li>Your "Schedule Mode" start and end times.</li>
+                    <li>Your chosen sensitivity settings for shake.</li>
+                    <li>The current state of the app modes (e.g., whether "Schedule Mode" is enabled).</li>
+                </ul>
+                <p>This data is stored securely on your device and is <strong>never</strong> transmitted or shared.</p>
+            </section>
+
+            <section>
+                <h2>Third-Party Services</h2>
+                <p>The only third-party service used by the App is <strong>Google AdMob</strong>, which is used to display advertisements. AdMob is an advertising service provided by Google Inc.</p>
+                <ul>
+                    <li>Google AdMob may collect and use device information, such as your device ID, to serve personalized ads.</li>
+                    <li>We do not share any personal information collected by our App's core features (like sensor or microphone data) with Google.</li>
+                    <li>We recommend you review Google's privacy policy for more information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Children's Privacy</h2>
+                <p>The App is not intended for use by children under the age of 13. We do not knowingly collect any personally identifiable information from children. If you believe your child has provided us with personal information, please contact us, and we will take steps to remove such information.</p>
+            </section>
+
+            <section>
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page. You are advised to review this policy periodically for any changes.</p>
+            </section>
+
+            <section class="contact">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact me.</p>
+                <p><strong>Satya Ranjan Sahoo</strong><br>
+                <a href="mailto:1rn21cd044.satayranjansahoo@gmail.com">1rn21cd044.satayranjansahoo@gmail.com</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Satya Ranjan Sahoo. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                // SET YOUR POLICY'S UPDATE DATE HERE (YYYY-MM-DD)
+                const lastUpdatedDate = new Date('2025-11-15T12:00:00Z');
+                
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const dateString = lastUpdatedDate.toLocaleDateString('en-US', options);
+                
+                const dateElement = document.getElementById('last-updated');
+                if (dateElement) {
+                    dateElement.textContent = dateString;
+                }
+            } catch (e) {
+                console.error('Error setting date:', e);
+            }
+        });
+    </script>
+</body>
+</html>
